@@ -1,0 +1,22 @@
+.container {
+	margin-top: 25px;
+	border: 1px solid #1ABC9C;
+}
+
+#bloccenter {
+	margin: 15px;
+}
+
+#blocbtnvalid {
+	margin-top: 5px;
+	text-align: right;
+}
+
+.btn-lg {
+	background-color: #1ABC9C !important;
+	color: white !important;
+}
+
+.form-control {
+	border: 3px solid #60D1FB !important;
+}

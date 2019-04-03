@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+
+
+
+nav{
+	background-color:#1abc9c;
+	font-family: 'Lato', sans-serif;
+}
+a{
+	color:white !important;
+	font-family: 'Lato', sans-serif;
+}
+footer{
+	background-color:#1abc9c;
+	color:white;
+	font-family: 'Lato', sans-serif;
+}
+.taille{
+	border: 1px;
+	height:800px;
+	max-height:100%;
+    overflow:hidden;
+    overflow-y:auto;
+}
+a{
+	font-size:1rem;
+}
+a:hover {
+	color:white;
+}
+
+a:hover:after {
+	content: "😊";
+}
