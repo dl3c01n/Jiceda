@@ -1,0 +1,18 @@
+
+.form-control {
+    display: block;
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.form-control:focus {
+    display: block;
+    width: 100%;
+    border: 3px solid #60DAFB;
+    border-radius: .25rem;
+}
+
+label{
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 20px;
+}
