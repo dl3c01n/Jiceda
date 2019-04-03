@@ -34,7 +34,7 @@
               <div class="card-body">
                 <H3>Que se passe-t-il en cas de conflit ?</H3>
                 <br>
-                <p>Si un conflit se génère, il sera traité au plus vite, si vous disposez de preuves, contactez nous <a href="./contact.html">ici</a></p>
+                <p>Si un conflit se génère, il sera traité au plus vite, si vous disposez de preuves, contactez nous <a href="./contact.php">ici</a></p>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@
               <div class="card-body">
                 <H3>Votre compte est innaccessible?</H3>
                 <br>
-                <p>Vous ne parvenez pas à vous connecter? Même en retrouvant le mot de passe ? Contactez l'équipe <a href="./contact.html">ici</a></p>
+                <p>Vous ne parvenez pas à vous connecter? Même en retrouvant le mot de passe ? Contactez l'équipe <a href="./contact.php">ici</a></p>
               </div>
             </div>
           </div>
@@ -60,7 +60,7 @@
               <div class="card-body">
                 <H3>Comment contacter l'équipe Jicéda ?</H3>
                 <br>
-                <p>Des questions ? Des bugs ? Des soucis ? Contactez nous <a href="./contact.html">ici</a> dès maintenant</p>
+                <p>Des questions ? Des bugs ? Des soucis ? Contactez nous <a href="./contact.php">ici</a> dès maintenant</p>
               </div>
             </div>
           </div>
