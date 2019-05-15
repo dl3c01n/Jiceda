@@ -1,3 +1,8 @@
+<?php
+
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,38 +20,7 @@
 
 	<!-- NAVBAR -->
 
-	<nav class="navbar navbar-expand-lg">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse text-uppercase justify-content-end" id="navbarTogglerDemo01">
-		    <ul class="navbar-nav">
-		    	<li class="nav-item active">
-		        	<img src="">
-		    	</li>
-		     	<li class="nav-item active">
-		        	<a class="nav-link" href="Accueil.php">home<span class="sr-only">(current)</span></a>
-		    	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="profil.php">mon profil</a>
-		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">messagerie privée</a>
-		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="#">thème sombre</a>
-		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="inscription.php">inscription</a>
-		      	</li>
-		      	<li class="nav-item">
-		        	<a class="nav-link" href="connexion.php">s'identifier</a>
-		      	</li>
-		    </ul>
-		    
-		</div>
-	<!-- FERMETURE BALISE NAV -- NAVBAR -->  
-	</nav>
+	<?php require('../navbar.php');  ?>
 
 	<!-- ZONES AMIS - PRINCIPALE - ABONNES -->
 	<div class="container-fluid" >
@@ -75,13 +49,10 @@
 
 	<!-- FOOTER -->
 
-	<footer>
-		<div class="container-fluid text-center mt-3">
-			<a href="#Accueil">CONTACT</a> - 
-			<a href="#FAQ">F.A.Q.</a> - 
-			<a href="#Accueil">mention légales</a> - 2019
-		</div>	
-	</footer>
+	<?php
+
+	require('../footer.php');
+?>
 
 
 

@@ -6,12 +6,11 @@
 
 
 
-
 nav{
 	background-color:#1abc9c;
 	font-family: 'Lato', sans-serif;
 }
-a{
+.nav-link{
 	color:white !important;
 	font-family: 'Lato', sans-serif;
 }
@@ -27,13 +26,36 @@ footer{
     overflow:hidden;
     overflow-y:auto;
 }
-a{
+.nav-link{
 	font-size:1rem;
 }
-a:hover {
+.nav-link:hover {
 	color:white;
 }
 
-a:hover:after {
+.nav-link:hover:after {
 	content: "😊";
+}
+.btn-lg {
+	background-color: #1ABC9C !important;
+	color: white !important;
+}
+.foot-link{
+	color:white !important;
+	font-family: 'Lato', sans-serif;
+}
+
+.foot-link{
+	font-size:1rem;
+}
+.foot-link:hover {
+	color:white;
+}
+
+.foot-link:hover:after {
+	content: "😊";
+}
+
+h3{
+	color: #1ABC9C;
 }

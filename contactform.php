@@ -133,7 +133,7 @@
 
             <div class='container'>
                 <div id='bloccenter'>
-                    <h1 class='lead-login h5 mb-3 font-weight-normal text-center'>Se connecter</h1>
+                    <h1 class='lead-login h5 mb-3 font-weight-normal text-center'>Contactez-nous</h1>
                     <form action='".$form_action."' method='POST' class='needs-validation' novalidate>
                         <div class='form-group'>
                             <label for='sujetcontact'>Destinataire :</label>

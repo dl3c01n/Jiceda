@@ -5,7 +5,7 @@
   <title>Connexion</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css" href="../stylus.css">
+  <link rel="stylesheet" type="text/css" href="./stylus.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
@@ -55,19 +55,42 @@ include "dbconnect.php";
 
 if (isset($_POST["valid"])) {
 
-	$login = $_POST["login"];
-    $realpass = $_POST['pass'];
-	require('database.php');
-	$queque = $dbh->prepare("SELECT `password` FROM Users WHERE `pseudo` = ?");
-    $queque->bindParam(1, $login);
-    $queque->execute();
-	$hashed = $queque->fetch();
-    if(password_verify($realpass ,$hashed['password'])){
-		echo "Vous êtes loggé";
-		header("Refresh:3; url=index.php");
-    }else {
-        echo "n'est pas bon";
-    }
+        $login = $_POST["login"];
+
+        $bdd = connectDb();
+        $query = $bdd->prepare("SELECT COUNT(*) FROM users WHERE pseudo = '" . $login . "';");
+        $query->execute();
+        $data = $query->fetch();
+        $query->closeCursor();
+
+        if ($data["COUNT(*)"] > 0) {
+
+                $pass = $_POST["pass"];
+
+                $bdd = connectDb();
+                $query = $bdd->prepare("SELECT password FROM users WHERE pseudo = '" . $login . "';");
+                $query->execute();
+                $data = $query->fetch();
+                $query->closeCursor();
+
+                if (password_verify($pass, $data["password"])) {
+
+                        //session_start();
+						$_SESSION["login"] = $login;
+						echo "Vous êtes connecté, vous allez être redirigé vers l'accueil";
+                        //header("Refresh:3; url=127.0.0.1/pages/accueil.php");
+
+                } else {
+
+                        echo "Mot de passe incorrect.";
+
+                }
+
+        } else {
+
+                echo "Login incorrect.";
+
+        }
 
 }
 ?>
