@@ -2,9 +2,9 @@
     <link rel="stylesheet" href="./style.css">
     
     <footer>
-		<div class="container-fluid text-center mt-3">
+		<div class="container-fluid text-center p-3">
 			<a class="foot-link" href="./contact.php">CONTACT</a> - 
 			<a class="foot-link" href="./faq.php">F.A.Q.</a> - 
-			<a class="foot-link" href="./mentions.php">mention légales</a> - 2019
+			<a class="foot-link" href="./mentions.php">MENTIONS LÉGALES</a> - 2019
 		</div>	
 	</footer>

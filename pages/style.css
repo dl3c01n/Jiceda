@@ -6,22 +6,34 @@
 
 
 
+body{
+	background-color: #121212;
+	color: white;
+}
+
 nav{
-	background-color:#1abc9c;
+	background-color:#282828 !important;
 	font-family: 'Lato', sans-serif;
 }
 .nav-link{
-	color:white !important;
+	color:#1ABC9C !important;
 	font-family: 'Lato', sans-serif;
 }
 footer{
-	background-color:#1abc9c;
-	color:white;
+	background-color:#282828;
+	color:#1ABC9C;
 	font-family: 'Lato', sans-serif;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#send{
+	color: white !important;
 }
 .taille{
 	border: 1px;
-	height:800px;
 	max-height:100%;
     overflow:hidden;
     overflow-y:auto;
@@ -38,10 +50,10 @@ footer{
 }
 .btn-lg {
 	background-color: #1ABC9C !important;
-	color: white !important;
+	color: #1abc9c !important;
 }
 .foot-link{
-	color:white !important;
+	color: #1abc9c !important;
 	font-family: 'Lato', sans-serif;
 }
 
@@ -49,7 +61,7 @@ footer{
 	font-size:1rem;
 }
 .foot-link:hover {
-	color:white;
+	color:1abc9c;
 }
 
 .foot-link:hover:after {

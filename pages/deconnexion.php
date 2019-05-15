@@ -9,3 +9,14 @@ echo "<div class='alert alert-danger'>Vous êtes déconnecté ! </div>";
 header("Refresh:3; url=accueil.php");
 
 ?>
+
+<script>
+		function changeColor(){
+	var elements = document.getElementsByClassName('taille');
+	for(var i = 0; i < elements.length; i++){
+		document.getElementById('bod').style.backgroundColor = "#121212";
+		elements[i].style.backgroundColor = "#121212";
+		elements[i].style.color = "white";
+		}
+		}
+	</script>

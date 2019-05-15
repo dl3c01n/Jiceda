@@ -1,6 +1,7 @@
 <link rel="stylesheet" type="text/css" href="./style.css">
 
-<div class="container" style="margin-top: 30px;">
+<body id="bod">
+<div class="container taille" style="margin-top: 30px;">
     <div class="row">
         <div class="col-sm-12 col-md-12 offset-lg-3 offset-xl-3 col-lg-6 col-xl-6 ">
             <div class="card text-center">
@@ -33,7 +34,7 @@
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-lg-3 offset-xl-3">
             <div class="card text-center">
-              <div class="card-body">
+              <div class="card-body taille">
                 <h3>Le site Jiceda est hébergé par :</h3>
                     <p>OVH, Société Anonyme par Actions Simplifiées,<br> au capital de 200.000 euros, dont le siège social est établi : <br>
                     140 Quai du Sartel - 59100 ROUBAIX<br/>
@@ -43,3 +44,25 @@
           </div>
       </div>
     </div>
+
+
+    <script>
+var lmts = document.getElementsByClassName('card-body');
+    for(var v = 0; v < lmts.length; v++){
+      lmts[v].style.backgroundColor = "#121212";
+    }
+
+		function changeColor(){
+	var elements = document.getElementsByClassName('taille');
+	for(var i = 0; i < elements.length; i++){
+		document.getElementById('bod').style.backgroundColor = "#FFF";
+		elements[i].style.backgroundColor = "#FFF";
+		elements[i].style.color = "black";
+    }
+    var sec_lmt = document.getElementsByClassName('card-body');
+    for(var v = 0; v < sec_lmt.length; v++){
+      sec_lmt[v].style.backgroundColor = "#FFF";
+    }
+		}
+  </script>
+  </body>

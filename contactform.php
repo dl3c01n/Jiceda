@@ -159,8 +159,8 @@
                             <div class='invalid-feedback'>
                                 Veuillez saisir un message.
                             </div>
-                            <div id='blocbtnvalid'>
-                                <button type='submit' class='btn btn-lg' name='envoi'>Envoyer</button>
+                            <div id='blocbtnvalid' class='text-center'>
+                                <button type='submit' class='btn btn-lg mt-2' id='send' name='envoi'>Envoyer</button>
                             </div>
                         </div>
                     </form>

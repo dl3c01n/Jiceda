@@ -1,3 +1,46 @@
+<?php
+include "dbconnect.php";
+
+if (isset($_POST["valid"])) {
+
+        $login = $_POST["login"];
+
+        $bdd = connectDb();
+        $query = $bdd->prepare("SELECT COUNT(*) FROM users WHERE pseudo = '" . $login . "';");
+        $query->execute();
+        $data = $query->fetch();
+        $query->closeCursor();
+
+        if ($data["COUNT(*)"] > 0) {
+
+                $pass = $_POST["pass"];
+
+                $bdd = connectDb();
+                $query = $bdd->prepare("SELECT password FROM users WHERE pseudo = '" . $login . "';");
+                $query->execute();
+                $data = $query->fetch();
+                $query->closeCursor();
+
+                if (password_verify($pass, $data["password"])) {
+                        session_start();
+                        $_SESSION["login"] = $login;		
+                        echo "<div class='alert alert-success'>Vous êtes connecté, vous allez être redirigé vers l'accueil</div>";                        			
+                        header("Refresh:3; url=accueil.php");
+
+                } else {
+
+                        echo "Mot de passe incorrect.";
+
+                }
+
+        } else {
+
+                echo "Login incorrect.";
+
+        }
+
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -31,7 +74,7 @@
 		            	Mot de passe requis.
 		            </div>
 					<div id="blocbtnvalid">
-						<button type='submit' class='btn btn-lg' name='valid'>Connexion</button>
+						<button type='submit' class='btn btn-lg' name='valid' id="send">Connexion</button>
 					</div>
 					<p class="infoinput text-center"></p>
 				</form>
@@ -47,50 +90,3 @@
 </body>
 
 </html>
-
-<?php
-
-
-include "dbconnect.php";
-
-if (isset($_POST["valid"])) {
-
-        $login = $_POST["login"];
-
-        $bdd = connectDb();
-        $query = $bdd->prepare("SELECT COUNT(*) FROM users WHERE pseudo = '" . $login . "';");
-        $query->execute();
-        $data = $query->fetch();
-        $query->closeCursor();
-
-        if ($data["COUNT(*)"] > 0) {
-
-                $pass = $_POST["pass"];
-
-                $bdd = connectDb();
-                $query = $bdd->prepare("SELECT password FROM users WHERE pseudo = '" . $login . "';");
-                $query->execute();
-                $data = $query->fetch();
-                $query->closeCursor();
-
-                if (password_verify($pass, $data["password"])) {
-
-                        //session_start();
-						$_SESSION["login"] = $login;
-						echo "Vous êtes connecté, vous allez être redirigé vers l'accueil";
-                        //header("Refresh:3; url=127.0.0.1/pages/accueil.php");
-
-                } else {
-
-                        echo "Mot de passe incorrect.";
-
-                }
-
-        } else {
-
-                echo "Login incorrect.";
-
-        }
-
-}
-?>

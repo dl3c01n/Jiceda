@@ -8,11 +8,13 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body id="bod">
 
 	<?php include "contactform.php" ?>
 
 	<script src="verifs.js"></script>
+
+	<script src="./index.js"></script>
 
 </body>
 

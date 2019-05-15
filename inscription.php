@@ -187,7 +187,7 @@ if(isset($_POST['validvalid'])){
       </div>
     </div>
     </div>
-  <button class="btn btn-lg" name="validvalid" style="background: #1ABC9C; color: white" type="submit">S'inscrire</button>
+  <button class="btn btn-lg" name="validvalid" style="background: #1ABC9C; color: white !important" type="submit">S'inscrire</button>
 </form>
 </div>
 
